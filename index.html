@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Política de Privacidade — Extensão AuvoDB</title>
+<style>
+body{margin:0;background:#f6f5fb;color:#212529;font:16px/1.65 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+main{max-width:820px;margin:0 auto;padding:40px 22px 60px}
+h1{font-size:30px;line-height:1.25;margin:0 0 6px;color:#3b1f86}
+h2{font-size:21px;margin:34px 0 10px;color:#3b1f86;border-bottom:1px solid #e2ddf3;padding-bottom:6px}
+p{margin:0 0 12px}ul{margin:0 0 14px;padding-left:22px}li{margin:4px 0}
+code{background:#ece8f8;border-radius:4px;padding:1px 5px;font-size:.9em}
+a{color:#5f3dc4}
+.t{overflow-x:auto;margin:10px 0 16px}
+table{border-collapse:collapse;width:100%;font-size:14.5px;background:#fff}
+th,td{border:1px solid #ddd6f3;padding:9px 11px;text-align:left;vertical-align:top}
+th{background:#ece8f8}
+</style>
+</head>
+<body><main>
+<h1>Política de Privacidade — Extensão AuvoDB</h1>
+<p><strong>Última atualização:</strong> 23 de novembro de 2026<br>A extensão AuvoDB para Google Chrome é uma ferramenta <strong>de uso interno</strong> da Auvo Tecnologia, feita para a equipe de suporte da Auvo consultar e auditar informações do sistema Auvo. Ela só pode ser usada por pessoas com conta Google do domínio <strong>@auvo.com.br</strong> e com acesso aprovado por um administrador.<br>Esta política explica quais dados a extensão coleta, como eles são usados, onde ficam guardados, com quem são compartilhados e por quanto tempo.</p>
+<h2>1. Quais dados coletamos</h2>
+<p><strong>a) Dados da conta Google (login)</strong><br>Ao entrar com o Google, a extensão recebe o <strong>nome</strong>, o <strong>e-mail</strong> e a <strong>foto de perfil</strong> da conta. Usamos o escopo básico de login (<code>openid</code>, <code>email</code>, <code>profile</code>). A extensão não tem acesso a e-mails, arquivos, agenda ou qualquer outro dado da conta Google.</p>
+<p><strong>b) Credencial de sessão</strong><br>Depois do login, o servidor do AuvoDB gera uma <strong>chave de sessão</strong> que fica guardada no navegador do usuário (armazenamento local da extensão) e é enviada nas consultas, para identificar quem está usando. A chave expira e é apagada do navegador quando deixa de valer.</p>
+<p><strong>c) Conteúdo das páginas do sistema Auvo</strong><br>Nos sites do sistema Auvo (<code>auvo.com.br</code>, <code>2workers.me</code>, <code>auditoria.app</code>), a extensão lê da página que o usuário está vendo as informações necessárias para a consulta que ele pediu — por exemplo, o código de uma tarefa, de um cliente, de uma base, de uma nota fiscal, de uma fatura ou um endereço de e-mail que ele quer verificar. Esses dados são enviados ao servidor do AuvoDB <strong>somente quando o usuário aciona uma função</strong> da extensão.<br>No HubSpot (<code>app.hubspot.com</code>), a extensão apenas preenche a busca do próprio HubSpot com o termo que veio do painel do AuvoDB. Esse termo fica guardado no navegador por no máximo 90 segundos.</p>
+<p><strong>d) Registros de uso (logs)</strong><br>Para segurança e auditoria, o servidor do AuvoDB registra cada consulta feita pela extensão: <strong>e-mail, nome e foto</strong> do usuário, <strong>endereço IP</strong>, <strong>função usada</strong>, um <strong>resumo do que foi consultado</strong> (ex.: código da tarefa), <strong>data e hora</strong>, <strong>tempo de resposta</strong> e <strong>versão da extensão</strong>. Também registramos tentativas de acesso negadas (ex.: usuário não aprovado ou IP não autorizado).</p>
+<p><strong>e) Preferências</strong><br>Configurações da própria extensão (como modo de impressão e filtros) ficam guardadas apenas no navegador do usuário.<br>A extensão <strong>não coleta</strong>: senhas, dados de pagamento, histórico de navegação, conteúdo de sites fora dos listados acima, localização do usuário, nem dados de saúde ou comunicações pessoais.</p>
+<h2>2. Como usamos os dados</h2>
+<p>Usamos os dados <strong>exclusivamente</strong> para:</p>
+<ul>
+<li>identificar o usuário e verificar se ele tem permissão para usar a extensão;</li>
+<li>fazer as consultas que o próprio usuário pede (buscar no banco de dados do sistema Auvo as informações da tarefa, cliente, nota fiscal etc.);</li>
+<li>manter a segurança do acesso e permitir auditoria interna de quem consultou o quê;</li>
+<li>avisar a equipe interna sobre eventos de operação (ex.: novo usuário pedindo acesso, consulta muito lenta, acesso bloqueado).</li>
+</ul>
+<p><strong>Não vendemos, não alugamos e não cedemos dados a terceiros.</strong> Não usamos dados para publicidade, para criar perfis de usuários, para análise de crédito, nem para qualquer finalidade que não seja o funcionamento da extensão.<br>O uso de informações recebidas das APIs do Google segue a <a href="https://developer.chrome.com/docs/webstore/program-policies/user-data-faq">Política de Dados do Usuário da Chrome Web Store</a>, incluindo os requisitos de <strong>Uso Limitado</strong>.</p>
+<h2>3. Onde os dados ficam e como são processados</h2>
+<ul>
+<li><strong>No navegador do usuário:</strong> a chave de sessão, os dados básicos do perfil (nome, e-mail, foto) e as preferências ficam no armazenamento local da extensão. Saem do navegador apenas quando o usuário desinstala a extensão ou sai da conta.</li>
+<li><strong>No servidor do AuvoDB:</strong> o servidor é operado pela própria Auvo. Ele guarda o cadastro dos usuários autorizados (nome, e-mail, foto, situação do acesso e permissões) e os registros de uso. As consultas ao banco de dados do sistema Auvo são feitas pelo servidor, nunca diretamente pela extensão.</li>
+<li>O acesso ao servidor exige a chave de sessão válida e pode ser limitado a endereços IP autorizados.</li>
+</ul>
+<h2>4. Com quem compartilhamos</h2>
+<p>Os dados só passam pelos serviços abaixo, e só na medida necessária para cada função:</p>
+<div class="t"><table><thead><tr><th>Serviço</th><th>O que recebe</th><th>Para quê</th></tr></thead><tbody><tr><td><strong>Google</strong> (login)</td><td>O pedido de login do usuário</td><td>Autenticar com a conta Google @auvo.com.br</td></tr><tr><td><strong>Resend</strong> (serviço de envio de e-mails da Auvo)</td><td>O endereço de e-mail que o usuário pediu para verificar</td><td>Consultar ou remover esse e-mail da lista de bloqueio de envio — a consulta é feita pelo servidor do AuvoDB</td></tr><tr><td><strong>eNotas e PlugNotas</strong> (emissores de nota fiscal usados pelos clientes da Auvo)</td><td>Dados da empresa cliente e da nota fiscal consultada (ex.: razão social, CNPJ, número da nota) — não envia dados do usuário da extensão</td><td>Consultar a configuração e a situação das notas fiscais — a consulta é feita pelo servidor do AuvoDB</td></tr><tr><td><strong>Esri / ArcGIS</strong> (mapas)</td><td>A área do mapa sendo exibida (pedido das imagens do mapa)</td><td>Mostrar o mapa da rota de uma tarefa</td></tr><tr><td><strong>Discord</strong> (comunicação interna da equipe)</td><td>Nome e/ou e-mail do usuário em avisos internos de operação</td><td>Avisar a equipe da Auvo sobre novos pedidos de acesso, acessos bloqueados e consultas lentas</td></tr><tr><td><strong>Provedor de hospedagem</strong> do servidor do AuvoDB</td><td>Os dados guardados no servidor, como operador</td><td>Manter o servidor funcionando</td></tr></tbody></table></div>
+<p>Os dados também podem ser fornecidos a autoridades quando exigido por lei.</p>
+<h2>5. Por quanto tempo guardamos</h2>
+<ul>
+<li><strong>Cadastro do usuário:</strong> enquanto ele tiver acesso à extensão. Quando o acesso é removido por um administrador, o cadastro é apagado.</li>
+<li><strong>Registros de uso:</strong> guardamos os <strong>25.000 registros mais recentes</strong>; os mais antigos são apagados automaticamente.</li>
+<li><strong>Tentativas de acesso negadas:</strong> guardamos as <strong>200 mais recentes</strong>.</li>
+<li><strong>Dados no navegador:</strong> até o usuário sair da conta, a sessão expirar ou a extensão ser desinstalada.</li>
+</ul>
+<h2>6. Segurança</h2>
+<p>O acesso é restrito a contas @auvo.com.br aprovadas por um administrador. Cada usuário tem permissões por função, pode ser bloqueado a qualquer momento e a sessão expira. As credenciais de acesso ao banco de dados e aos serviços externos ficam apenas no servidor, nunca na extensão.</p>
+<h2>7. Direitos do usuário (LGPD)</h2>
+<p>De acordo com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018), o usuário pode pedir a qualquer momento: confirmação de que tratamos seus dados, acesso a eles, correção, exclusão, informação sobre com quem foram compartilhados e revogação do consentimento. Para isso, basta entrar em contato pelo e-mail abaixo.</p>
+<h2>8. Alterações nesta política</h2>
+<p>Quando esta política mudar, a data no topo será atualizada. Mudanças relevantes serão comunicadas à equipe que usa a extensão.</p>
+<h2>9. Contato</h2>
+<p><strong>Auvo Tecnologia</strong> — responsável pela extensão AuvoDB<br>E-mail: <strong>joao.pimentel@auvo.com.br</strong></p>
+</main></body>
+</html>
